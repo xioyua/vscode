@@ -41,9 +41,9 @@ void ShowList(Linklist L)
     Linklist n = L;
     while (flag == 1)
     {
+        printf("data:%d \n", n->data);
         if (n->next != NULL)
         {
-            printf("data:%d \n", n->data);
             n = n->next;
         }
         else
@@ -59,6 +59,7 @@ int GetLength(Linklist L)
     while(node->next!= NULL)
     {
         num++;
+        node = node->next;
     }
     return num;
 }
@@ -71,6 +72,7 @@ int main()
     ShowList(list);
     num = GetLength(list);
     printf("num:%d", num);
+    printf("end\n");
     getchar();
     getchar();
 }
